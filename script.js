@@ -48,7 +48,7 @@ const fetchDataFromDB = () => {
             row.innerHTML = `
                 <td>${data.name}</td>
                 <td>${data.email}</td>
-                <td>${data.city}</td>
+                <td>${data.age}</td>
             `;
             tableBody.appendChild(row);
         });
@@ -65,14 +65,14 @@ const handleFormSubmit = (event) => {
     const formData = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
-        city: document.getElementById('city').value
+        age: document.getElementById('age').value
     };
 
     addDataToDB(formData);
 
     document.getElementById('name').value = '';
     document.getElementById('email').value = '';
-    document.getElementById('city').value = '';
+    document.getElementById('age').value = '';
 };
 
 document.getElementById('data-form').addEventListener('submit', handleFormSubmit);
